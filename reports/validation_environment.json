@@ -1,0 +1,33 @@
+{
+  "purpose": "Local verification of the curated snapshot, not the historical training environment. No clean-environment installation performed.",
+  "date": "2026-10-27",
+  "python": "3.11.4",
+  "system": "Windows",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.11.1",
+    "joblib": "1.5.3",
+    "PyQt5": "5.15.11",
+    "threadpoolctl": "3.6.0",
+    "pandas": null,
+    "jupyterlab": null,
+    "nbformat": null
+  },
+  "checks": {
+    "python_syntax": true,
+    "notebook_json_and_clean_outputs": true,
+    "main_notebook_code_syntax": true,
+    "notebook_source_preserved": true,
+    "artifact_hashes": true,
+    "trusted_model_load_and_interface_prediction": true,
+    "gui_offscreen_initialization_style_and_render": true,
+    "dataset_inventory_figure_render_and_visual_inspection": true,
+    "full_notebook_execution": false,
+    "firmware_compilation": false,
+    "live_acquisition": false,
+    "github_actions_execution": false
+  },
+  "limitations": "Full waveform datasets and CHM hardware unavailable. Notebook dependencies pandas, JupyterLab and nbformat absent from the local verification environment."
+}

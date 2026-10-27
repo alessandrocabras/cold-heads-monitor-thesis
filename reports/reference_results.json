@@ -1,0 +1,49 @@
+{
+  "provenance": "Transcribed from author-supplied notebook outputs in the project discussion. Not re-executed during review snapshot preparation.",
+  "published_kmeans": {
+    "silhouette": 0.7848,
+    "calinski_harabasz": 8176200,
+    "davies_bouldin": 0.2163,
+    "adjusted_rand": 0.98
+  },
+  "re_evaluation_protocol": {
+    "random_state": 42,
+    "channel_index": 1,
+    "max_windows_per_file": 25000,
+    "max_labeled_windows_per_class": 50000,
+    "supervised_windows": 125000,
+    "supervised_counts": {"Maintenance": 50000, "Normal": 50000, "Compressor Down": 25000},
+    "exploratory_windows_inferred_from_code_and_inventory": 152343,
+    "exploratory_includes_unlabeled_nasa": true,
+    "historical_hardware_for_this_run": null
+  },
+  "exploratory_clustering": [
+    {"method": "KMeans-3", "fit_seconds": 2.278682, "n_clusters": 3, "noise": 0, "silhouette": 0.566372, "calinski_harabasz": 524028.774802, "davies_bouldin": 0.588938, "adjusted_rand": 0.264671, "normalized_mutual_info": 0.441472},
+    {"method": "DBSCAN", "fit_seconds": 58.507852, "n_clusters": 2, "noise": 0, "silhouette": 0.745235, "calinski_harabasz": 453251.444152, "davies_bouldin": 0.393176, "adjusted_rand": 0.393194, "normalized_mutual_info": 0.615867},
+    {"method": "OPTICS", "fit_seconds": 524.496805, "n_clusters": 4, "noise": 70, "silhouette": 0.270895, "calinski_harabasz": 198804.934421, "davies_bouldin": 2.504001, "adjusted_rand": 0.879163, "normalized_mutual_info": 0.895254}
+  ],
+  "kmeans_health_training_diagnostic": {
+    "label_order": ["Maintenance", "Normal", "Compressor Down"],
+    "confusion_matrix": [[25133, 24864, 3], [24846, 25154, 0], [0, 0, 25000]],
+    "accuracy_rounded": 0.60,
+    "distance_threshold": 1.881988390350367,
+    "anomaly_margin": 0.5,
+    "unknown_training_count": 0
+  },
+  "rf_random_holdout": {"test_fraction": 0.25, "stratified": true, "random_state": 42, "n_train": 93750, "n_test": 31250, "accuracy": 0.999968},
+  "rf_leave_one_file_out": [
+    {"file": "dataset_1020.pkl", "n_test": 16642, "accuracy": 1.0},
+    {"file": "dataset_arcetri_head.pkl", "n_test": 25000, "accuracy": 1.0},
+    {"file": "dataset_k_receiver.pkl", "n_test": 16663, "accuracy": 0.99982},
+    {"file": "head_30k_ore.pkl", "n_test": 16695, "accuracy": 0.99976},
+    {"file": "head_new.pkl", "n_test": 25000, "accuracy": 0.85408},
+    {"file": "dataset_no_comp.pkl", "n_test": null, "accuracy": null, "reason": "Training would miss class 2"}
+  ],
+  "unlabeled_nasa_predictions": {
+    "n_windows": 2343,
+    "kmeans_health": {"Maintenance": 1157, "Normal": 1171, "Compressor Down": 15},
+    "random_forest": {"Maintenance": 3, "Normal": 2325, "Compressor Down": 15},
+    "kmeans_nearest_centroid_distance": {"min": 0.019818831534340105, "median": 0.4392147108516754, "max": 1.1135994242389686},
+    "reference_labels_available": false
+  }
+}

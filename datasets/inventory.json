@@ -1,0 +1,14 @@
+{
+  "provenance": "Dataset diagnostic output supplied by the author during re-evaluation; no raw datasets included.",
+  "observation_shape": [3, 128],
+  "selected_channel_index": 1,
+  "files": [
+    {"file": "dataset_1020.pkl", "label": 0, "status": "Maintenance", "n_windows": 161172},
+    {"file": "dataset_arcetri_head.pkl", "label": 1, "status": "Normal", "n_windows": 150415},
+    {"file": "dataset_k_receiver.pkl", "label": 0, "status": "Maintenance", "n_windows": 130716},
+    {"file": "dataset_nasa.pklp", "label": null, "status": "Unlabeled", "n_windows": 2343},
+    {"file": "dataset_no_comp.pkl", "label": 2, "status": "Compressor Down", "n_windows": 150919},
+    {"file": "head_30k_ore.pkl", "label": 0, "status": "Maintenance", "n_windows": 151192},
+    {"file": "head_new.pkl", "label": 1, "status": "Normal", "n_windows": 139098}
+  ]
+}

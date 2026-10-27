@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.ino text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.yml text eol=lf
+*.txt text eol=lf
+*.pkl binary
+*.png binary
+*.pdf binary
