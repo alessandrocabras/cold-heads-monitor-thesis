@@ -3,9 +3,9 @@
 This directory has its own local Git repository on branch `main`. The parent
 working repository, its existing INAF remote and its history are unchanged.
 The public repository is https://github.com/alessandrocabras/cold-heads-monitor-thesis.
-Its URL is already configured as `origin`. Nothing has been pushed from this copy.
+Its URL is configured as `origin`. The initial snapshot is published as `thesis-review-v1`.
 
-From this directory, inspect and create the first commit:
+The initial publication used the following commit and tag steps:
 
 ```powershell
 git status --short
@@ -49,3 +49,19 @@ the project owners can choose one separately. Third-party theme notices are reta
 
 Before submission, include the repository URL and review tag in the thesis.
 Later corrections should receive a new tag rather than moving the review tag.
+
+## Update the Published Repository
+
+For the English comment and output cleanup, run from this directory:
+
+```powershell
+git add .
+git commit -m "Standardize English comments and output messages"
+git push origin main
+git tag -a thesis-review-v2 -m "English comments and output cleanup"
+git push origin thesis-review-v2
+```
+
+The revised review link is
+https://github.com/alessandrocabras/cold-heads-monitor-thesis/tree/thesis-review-v2.
+The original `thesis-review-v1` tag remains unchanged.

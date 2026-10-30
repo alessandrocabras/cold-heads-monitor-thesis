@@ -737,7 +737,7 @@ class MainWindow(QMainWindow):
         else:
             currentLower, currentUpper = self.yLimits
             targetLower, targetUpper = targetLimits
-            # Expand immediately, contract gently so the graph does not jump at every frame.
+            # Expand immediately; contract gradually to stabilize the live axis.
             nextLower = targetLower if targetLower < currentLower else currentLower * 0.85 + targetLower * 0.15
             nextUpper = targetUpper if targetUpper > currentUpper else currentUpper * 0.85 + targetUpper * 0.15
             self.yLimits = (nextLower, nextUpper)

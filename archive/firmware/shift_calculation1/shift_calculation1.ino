@@ -1,4 +1,3 @@
-
 int i = 0, j = 0;
 float time1[3] = {0,0};
 float time2[3] = {0,0};
@@ -86,6 +85,6 @@ void loop() {
       Serial.print(freq2, 6);
       Serial.print("\t Phase Shift = ");
       Serial.println(ps, 6);
-    } 
+    }
   delay(100);
 }

@@ -1,8 +1,9 @@
 # Historical Experiments
 
 These files are kept for traceability, not as the main reproduction path.
-Notebook cell source is preserved, while output, execution counts and transient
-metadata are removed. They may contain Colab paths, unseeded shuffles, differing
+Computation is retained, comments are reduced, and messages and notebook prose
+are standardized to English. Output, execution counts and transient metadata
+are removed. These files may contain Colab paths, unseeded shuffles, differing
 window lengths, older APIs and provisional interpretations.
 
 - `training_notebooks/`: earlier K-means, DBSCAN, OPTICS, inference and RF experiments.

@@ -9,12 +9,7 @@ class ColdHeadsMonitor(socket.socket):
     healthStatus = ''
 
     def errorandexit(self):
-        print ('')
-        print ('==================================================')
-        print ('ERROR, communication failed!')
-        print ('Exiting...')
-        print ('==================================================')
-        print ('')
+        print('ERROR: communication failed; exiting.')
         exit()
 
     def receiveFrame(self, adc_ch=None):
@@ -26,47 +21,29 @@ class ColdHeadsMonitor(socket.socket):
         while frame_terminator != expected_terminator:
             frame_rx_dummy = self.recv(max_buffer_size)
             if not frame_rx_dummy:
-                # Handle unexpected termination or empty frame
                 self.close()
                 self.errorandexit()
 
             frame_rx += frame_rx_dummy.decode()
             frame_terminator = frame_rx[-1]
 
-        # Remove terminator before returning the frame
         return frame_rx.rstrip(expected_terminator)
-    
+
     def idn(self):
         frame_tx = "#IDN?*"
         self.send(frame_tx.encode())
-        # print("S: {}".format(frame_tx))
         frame_rx = self.receiveFrame()
-        # print("R: {}".format(frame_rx))
 
     def acquire(self):
         frame_tx = "#ACQUIRE*"
         self.send(frame_tx.encode())
-        # print("S: {}".format(frame_tx))
         frame_rx = self.receiveFrame()
-        # print("R: {}".format(frame_rx))
         return frame_rx
 
-        
-    """
-    def getgain(self,adc_ch):
-        frame_tx = "#GETGAIN " + str(adc_ch) + "*"
-        self.send(frame_tx.encode())
-        #print ("S: " + frame_tx)
-        self.adcGains[adc_ch] = int(self.receiveFrame(adc_ch))
-        return self.adcGains[adc_ch]
-    """
-    
     def getshift(self, shift_code):
         frame_tx = "#GETSHIFT {}*".format(shift_code)
         self.send(frame_tx.encode())
-        # print("S: {}".format(frame_tx))
         return float(self.receiveFrame(shift_code))
-
 
     def getadc(self, adc_ch):
         frame_tx = "#GETADC {}*".format(adc_ch)
@@ -74,10 +51,8 @@ class ColdHeadsMonitor(socket.socket):
         frame_rx = self.receiveFrame(adc_ch)
         frame_rx = frame_rx.replace('*', '').split(' ')
         frame_rx = [float(x) for x in frame_rx]
-        # print("{}: {}".format(adc_ch, frame_rx))
         return frame_rx
 
-    
     def calculatePpValue(self, adc_ch, rx):
         if len(rx) > 0 and rx != 'ERROR':
             diffV = max(rx) - min(rx)
@@ -86,18 +61,12 @@ class ColdHeadsMonitor(socket.socket):
         else:
             return 'Invalid data'
 
-
-# ----------------------------------------------------------------------
 if __name__ == "__main__":
 
     try:
         coldHeadsMonitor = ColdHeadsMonitor()
         coldHeadsMonitor.settimeout(1)
         coldHeadsMonitor.connect(("192.168.150.94", 1666))
-        print ('')
-        print ('==================================================')
-        print ('SUCCESS, TCP connection created!')
-        print ('==================================================')
-        print ('')
+        print('TCP connection established.')
     except socket.error as errore:
         coldHeadsMonitor.errorandexit()

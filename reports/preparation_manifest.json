@@ -7,73 +7,73 @@
       "source": "notebooks/DBSCAN.ipynb",
       "destination": "archive/notebooks/DBSCAN.ipynb",
       "source_sha256": "b0ad292130bc4eb2c0f5b361466f25994729c3c5659b393ad7d5f9aae021cc88",
-      "export_sha256": "2b6914d24992d62440e9fafc9b8d3b715e07a4411988180a058750cf87065d07"
+      "export_sha256": "57dee4cb88366f97a59201380977c38c8f550d9e67146fb1a48950a19714cede"
     },
     {
       "source": "notebooks/k_means.ipynb",
       "destination": "archive/notebooks/k_means.ipynb",
       "source_sha256": "070b24bc9af3357646ae2a9eba2c247bc3df894df2268f515533d043c7061a51",
-      "export_sha256": "70c1327881b338103eef1ef12667ce966c14733c8a080d0f35086a3e358752e8"
+      "export_sha256": "efc6e2865f99813901c9cae96997a5f0a49d0de4ba2065be7f389292fbbc89c0"
     },
     {
       "source": "training_notebooks/DBSCAN.ipynb",
       "destination": "archive/training_notebooks/DBSCAN.ipynb",
       "source_sha256": "808dcaf4cab26db14f65bf5c99e2a6e1c15c8370896352f96271b624294039dc",
-      "export_sha256": "4f5e790b374ad1cd54dfec7a74629631a3b79fdd6e6be6b77566c6e760992644"
+      "export_sha256": "5c40b989b220810965948dc1a8fcfe18510a99dbc5b187cb899d7a73c2ffce3b"
     },
     {
       "source": "training_notebooks/DBSCAN_features.ipynb",
       "destination": "archive/training_notebooks/DBSCAN_features.ipynb",
       "source_sha256": "0dc869e8611aa170a6158b6a8206c24528354e4013a420f2f4ae31b8eb140e92",
-      "export_sha256": "fb6b13c2586434d3b6584ad30588d3acb77540a7fd556200c42920b9c12d84fc"
+      "export_sha256": "e2cba2e5b9d02a4a2d24eb73a2c5dbbf84bdce8b6dcf87b1f01fd5453108bf79"
     },
     {
       "source": "training_notebooks/incremental_DBSCAN.ipynb",
       "destination": "archive/training_notebooks/incremental_DBSCAN.ipynb",
       "source_sha256": "ce26503f8cc667c157de345c7e69c299e5991a874b1623f45784707ab0f70497",
-      "export_sha256": "04adfde106d6a6408d5dc945aa73b412b19c8736894d1f0ad2154111d21ea2d0"
+      "export_sha256": "828a0a81035e03df36c60b1bc6d96e605bab6c3ab75adf5c6b20dfe0d4c1dcac"
     },
     {
       "source": "training_notebooks/inference_real_time.ipynb",
       "destination": "archive/training_notebooks/inference_real_time.ipynb",
       "source_sha256": "af1c64c59d50328d0ce7c1ff3138daeb053c0b70f7495ea23fd5b904e6d8a257",
-      "export_sha256": "40e3062f109354bc734647521037e74eb378e588012aa0d65f601c06f1d0f71c"
+      "export_sha256": "b3792108269b7e233ea79d4642de31acfa3289eba09a670b9109c9431def4e0c"
     },
     {
       "source": "training_notebooks/KMEANS.ipynb",
       "destination": "archive/training_notebooks/KMEANS.ipynb",
       "source_sha256": "0989f0c795569b32e35cb7987e1dafddbaee335fbd941b30e12a48d7072275c3",
-      "export_sha256": "87c5a7b2c1e2f9dae80d7cd05cd2af9dcd95c26a7ef338b41d6f6fbc735e93bb"
+      "export_sha256": "c4409a5273ccf0e8f6929910c328634bc0022630d80feba09973ec28599ad748"
     },
     {
       "source": "training_notebooks/OPTICS.ipynb",
       "destination": "archive/training_notebooks/OPTICS.ipynb",
       "source_sha256": "b861dde139157f2b0c2713df07b67148c9fae3f2c02779433331f50365027dbd",
-      "export_sha256": "0802f84db1388ca9ba9e0f21603bc6d2ecb76573b7cb9d88b54d67363f8c1b77"
+      "export_sha256": "00085afd672852f0b76b0b9c59d32841c040e706cf3f623b35ffa5978161c60b"
     },
     {
       "source": "training_notebooks/Random_forest.ipynb",
       "destination": "archive/training_notebooks/Random_forest.ipynb",
       "source_sha256": "50afc3f4ca3dc0b0267aa4bc45c01c8a6fd7746909a1f036e67b48a77b3ad812",
-      "export_sha256": "10725eb37e505584791b4b39b53d5b055ecca25d42864777f46ce1814b13e762"
+      "export_sha256": "877f243644840ce286640989ff27562c1e27b02d6fdc5d0104e99a141d21dd79"
     },
     {
       "source": "training_notebooks/cold_head_model_comparison_and_export.ipynb",
       "destination": "training_notebooks/cold_head_model_comparison_and_export.ipynb",
       "source_sha256": "39b1b3086e4b1c991dc74e3c681774f3e6db65ef0955a338cda7a452c7827874",
-      "export_sha256": "b2b29bd315f7a3e4297b61b6e05bf5888261836c6edebd5563d617ad201eee07"
+      "export_sha256": "30871e44ff9bf042e817487c7195c0653c457dec2bda05600a4f05966ede8870"
     },
     {
       "source": "cold_heads_monitor.py",
       "destination": "cold_heads_monitor.py",
       "source_sha256": "a5056b35705ddb0f196121645f0e49eefaa2de2145b93728ca41c78c5831d067",
-      "export_sha256": "8ab494b37e6d54bfdfba0556d4f42bc232618b86b4c122884e9206f6210928ba"
+      "export_sha256": "e0bfb86d3bf552c54707cf464d8f2930b994686a8778ac474ba5e334e4ce9256"
     },
     {
       "source": "cold_heads_monitor_gui.py",
       "destination": "cold_heads_monitor_gui.py",
       "source_sha256": "4e2d27aaea0e8891c30e6915d75e9294ce7256ab75b955dc4976c62f96300bae",
-      "export_sha256": "4e2d27aaea0e8891c30e6915d75e9294ce7256ab75b955dc4976c62f96300bae"
+      "export_sha256": "5587758e52830754600964a59e7eb38cf82437bc9d256a650d607414b5c6d152"
     },
     {
       "source": "cold_head_status_model.py",
@@ -85,13 +85,13 @@
       "source": "plotter.py",
       "destination": "plotter.py",
       "source_sha256": "4bc2f0adb5841bbb4701890b5ff286c4a335e31cb124732d402a831148632471",
-      "export_sha256": "fba0fb15fbe8a955ff413411adf4eaace97b71c8c14e296dbb9716999bc7d5eb"
+      "export_sha256": "dd34d4d2da96942b1bf6281e02c80fe4167621284e74a74791a50a73a5c752d8"
     },
     {
       "source": "generate_thesis_diagrams.py",
       "destination": "generate_thesis_diagrams.py",
       "source_sha256": "ae7fd8cff0162fc9d449fc86f63e2a78fa2730b8027385d2dc6a0b4f5eca5130",
-      "export_sha256": "ae7fd8cff0162fc9d449fc86f63e2a78fa2730b8027385d2dc6a0b4f5eca5130"
+      "export_sha256": "e5d81287f71959d9851f6252d8e04cba69fee89a3db90e4edde0e1db85a5f766"
     },
     {
       "source": "random_forest_model_candidate.pkl",
@@ -385,7 +385,7 @@
       "source": "dark/stylesheet.qss",
       "destination": "dark/stylesheet.qss",
       "source_sha256": "a54d35127a2464198baac98744421b40ef67b01203b9b0b552b4329c2408ea19",
-      "export_sha256": "a54d35127a2464198baac98744421b40ef67b01203b9b0b552b4329c2408ea19"
+      "export_sha256": "c53b2d7f912de68561f9bd3641772fa253fd5c5b5356a6d0ac0a9a38b1d2a421"
     },
     {
       "source": "dark/transparent.svg",
@@ -463,13 +463,13 @@
       "source": "fw/sketch/myADC.ino",
       "destination": "fw/sketch/myADC.ino",
       "source_sha256": "24397bbbc14843bf44596ab1d672ecd69aeb95b945a6f5d21e0aec44dd40acce",
-      "export_sha256": "24397bbbc14843bf44596ab1d672ecd69aeb95b945a6f5d21e0aec44dd40acce"
+      "export_sha256": "441f35e6480b4edebdb6201a3429ffe229e8930deb5268ab5e079251c127180c"
     },
     {
       "source": "fw/sketch/myAPI.ino",
       "destination": "fw/sketch/myAPI.ino",
       "source_sha256": "cf576617b39c489f34afdb9faeb43920030f31f126a2c953958f584ded13cbef",
-      "export_sha256": "cf576617b39c489f34afdb9faeb43920030f31f126a2c953958f584ded13cbef"
+      "export_sha256": "77503e6738a73e4a1c30a98b518f17911ed3eea5b5b0ab1304d757ed5764b335"
     },
     {
       "source": "fw/sketch/myUtils.ino",
@@ -481,31 +481,37 @@
       "source": "fw/sketch/sketch.ino",
       "destination": "fw/sketch/sketch.ino",
       "source_sha256": "5b94f1c9c91b1d4617d54494305d7cb8c3760792fe56e5bfcd32a954db2a85c4",
-      "export_sha256": "5b94f1c9c91b1d4617d54494305d7cb8c3760792fe56e5bfcd32a954db2a85c4"
+      "export_sha256": "a59f76d851d0cc817502127471f8745512c9a5ec0a3bbfad66febba2e1dc1e81"
     },
     {
       "source": "data_acquisition.py",
       "destination": "archive/acquisition/data_acquisition.py",
       "source_sha256": "26b51d364d98631449335695f0bcea777216a67341fdb7ce413010f27ced5503",
-      "export_sha256": "4641ee6e5441710bff21cc88d34cfcbf88b0f72975d55a3467e6fa56dde77246"
+      "export_sha256": "dff8d425681161657ff27ba8deb0cdef389727c0a49c6c325260d0c7465d1ff6"
     },
     {
       "source": "read_data.py",
       "destination": "archive/acquisition/read_data.py",
       "source_sha256": "57248d5345fd6ccf59a0ee84adf8f35e20abfb1e7d048f5214667c44cf5860cf",
-      "export_sha256": "a66fc52e414e8d5c35b071a3f278fa092f00cc3307030f395986f0137be57fdc"
+      "export_sha256": "87cdc645c36e9ad784d40ebdc7209e0c12ecd59e7d9c137f1ab930b3266a5b98"
     },
     {
       "source": "fw/shift_calculation1/shift_calculation1.ino",
       "destination": "archive/firmware/shift_calculation1/shift_calculation1.ino",
       "source_sha256": "765e4229e0f5c82cef3698804cf899e803dd9314fc8fc6308144f3f6c4136ca4",
-      "export_sha256": "765e4229e0f5c82cef3698804cf899e803dd9314fc8fc6308144f3f6c4136ca4"
+      "export_sha256": "f4a8ef7c01573ec9137d1eba2e474901000f67dd4766ab5f43bf43129be4fc90"
     },
     {
       "source": "fw/shift_calculation_breve/shift_calculation_breve.ino",
       "destination": "archive/firmware/shift_calculation_breve/shift_calculation_breve.ino",
       "source_sha256": "591254b9a9be57cd2fccd4e2539c40e25d2404fab0ed2d5b3e0e86978514ea79",
-      "export_sha256": "591254b9a9be57cd2fccd4e2539c40e25d2404fab0ed2d5b3e0e86978514ea79"
+      "export_sha256": "deb3b5dd965a3e6923b9e062e092d3bdcc00877181d725dbb79077df1a6bf493"
+    }
+  ],
+  "curation_updates": [
+    {
+      "date": "2026-10-30",
+      "description": "Comments reduced; inactive code and redundant debug output removed; notebook prose and output messages standardized to English. Original source hashes retained; export hashes updated."
     }
   ]
 }

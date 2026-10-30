@@ -47,21 +47,6 @@ class Plotter(QObject):
             return 'Maintenance'
 
         return 'Normal'
-    
-    '''
-    def calculate_phase(self,snapshot1, snapshot2):
-        # Calcola gli angoli per ciascun campione
-        angoli1 = [cmath.phase(complex(1, valore)) for valore in snapshot1]
-        angoli2 = [cmath.phase(complex(1, valore)) for valore in snapshot2]
-
-        # Calcola la differenza di fase in radianti
-        differenza_fase_rad = angoli2[0] - angoli1[0]
-
-        # Converti la differenza di fase da radianti a gradi
-        differenza_fase_gradi = differenza_fase_rad * (180 / cmath.pi)
-
-        return str(differenza_fase_gradi)
-    '''
 
     def stop(self):
         self.running = False
@@ -86,9 +71,6 @@ class Plotter(QObject):
                         self.coldHeadsMonitor.shiftValues[i] = self.coldHeadsMonitor.getshift(shift_code)
 
                     self.coldHeadsMonitor.healthStatus = self.getHealthStatus(self.coldHeadsMonitor.adcValues)
-                    #print('ch12:' + self.calculate_phase(self.coldHeadsMonitor.adcValues[0], self.coldHeadsMonitor.adcValues[1]))
-                    #print('ch13: ' + self.calculate_phase(self.coldHeadsMonitor.adcValues[0], self.coldHeadsMonitor.adcValues[2]))
-
                     self.progress.emit()
         except Exception as exc:
             if self.running:

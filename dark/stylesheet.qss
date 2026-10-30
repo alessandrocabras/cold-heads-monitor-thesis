@@ -35,14 +35,9 @@
  * ---------------------------------------------------------------------
  */
 
-/**
- *  MAIN STYLESHEET
- *  ---------------
- */
-
 QToolTip
 {
-    /* 0.2ex is the smallest value that's not ignored on Windows. */
+
     border: 0.04em solid #eff0f1;
     background-color: #31363b;
     alternate-background-color: #31363b;
@@ -88,15 +83,11 @@ QCheckBox:disabled
 
 QGroupBox
 {
-    /* Need to make sure the groupbox doesn't compress below the title. */
+
     min-height: 1.2em;
     border: 0.04em solid #76797c;
     border-radius: 0.09em;
-    /**
-     * This gives us enough space at the top to ensure we can move the
-     * title to be inside the guidelines, and the padding at the top
-     * ensures we have space below the title.
-     */
+
     margin-top: 0.5em;
     padding-top: 1em;
 }
@@ -109,7 +100,7 @@ QGroupBox:focus
 
 QGroupBox::title
 {
-    /* We need to move 0.6em up to be inside the lines, +1em for padding. */
+
     top: -1.6em;
     subcontrol-origin: content;
     subcontrol-position: top center;
@@ -305,7 +296,7 @@ QMenu::icon
 
 QMenu::item
 {
-    /* Add extra padding on the right for the QMenu arrow */
+
     padding: 0.23em 1.5em 0.23em 1.3em;
     border: 0.09em solid transparent;
     background: transparent;
@@ -424,22 +415,11 @@ QAbstractScrollArea
     background-color: transparent;
 }
 
-/**
- *  This is the background for the box in the bottom-right corner
- *  whene both scrollbars are active.
- */
 QAbstractScrollArea::corner
 {
     background: #31363b;
 }
 
-/**
- *  Can't do the KDE style of where the scrollbar handle
- *  becomes light on the hover, and only when the handle
- *  is hovered does it become stylized. This is because
- *  both the handle and the background events are treated
- *  together.
- */
 QScrollBar:horizontal
 {
     background-color: #1d2023;
@@ -622,10 +602,6 @@ QSizeGrip
     height: 0.5em;
 }
 
-/**
- *  Set the separator to be transparent, since the dock has a border.
- *  On PyQt6, neither the border nor the background seem to be respected.
- */
 QMainWindow::separator
 {
     border: 0.09em transparent #76797c;
@@ -643,11 +619,11 @@ QMenu::separator
     margin-right: 0.41em;
 }
 
-QFrame[frameShape="2"], /* QFrame::Panel == 0x0003 */
-QFrame[frameShape="3"], /* QFrame::WinPanel == 0x0003 */
-QFrame[frameShape="4"], /* QFrame::HLine == 0x0004 */
-QFrame[frameShape="5"], /* QFrame::VLine == 0x0005 */
-QFrame[frameShape="6"]  /* QFrame::StyledPanel == 0x0006 */
+QFrame[frameShape="2"],
+QFrame[frameShape="3"],
+QFrame[frameShape="4"],
+QFrame[frameShape="5"],
+QFrame[frameShape="6"]
 {
     border-width: 0.04em;
     padding: 0.09em;
@@ -657,7 +633,6 @@ QFrame[frameShape="6"]  /* QFrame::StyledPanel == 0x0006 */
     border-radius: 0.23em;
 }
 
-/* Provide highlighting for frame objects. */
 QFrame[frameShape="2"]:hover,
 QFrame[frameShape="3"]:hover,
 QFrame[frameShape="4"]:hover,
@@ -667,19 +642,11 @@ QFrame[frameShape="6"]:hover
     border: 0.04em solid #3daee9;
 }
 
-/* Don't provide an outline if we have a widget that takes up the space. */
 QFrame[frameShape] QAbstractItemView:hover
 {
     border: 0em solid black;
 }
 
-/**
- *  Note: I can't really change the background of the toolbars
- *  independently, since KDE Breeze has different colors for the
- *  window bar and the rest of the UI. The top toolbar uses
- *  the window style, and the rest use the application style,
- *  which we can't do.
- */
 QToolBar
 {
     font-weight: bold;
@@ -733,7 +700,7 @@ QToolBar QToolButton:hover
 QToolBar QToolButton:pressed
 {
     border: 0.04em solid #3daee9;
-    /* The padding doesn't inherit from `QToolBar QToolButton`, so leave it in. */
+
     padding-left: 0.2em;
     padding-right: 0.3em;
 }
@@ -861,7 +828,7 @@ QComboBox:hover:pressed:editable
 
 QComboBox QAbstractItemView
 {
-    /* This happens for the drop-down menu always, whether editable or not.*/
+
     background-color: #1d2023;
     selection-background-color: #2a79a3;
     outline-color: 0em;
@@ -973,11 +940,6 @@ QDoubleSpinBox
     min-width: 4em;
 }
 
-/**
- *  `QCalendarWidget QAbstractItemView:enabled` sets the color, background
- *  color, and selection color for active dates in the view.
- *  `QCalendarWidget QAbstractItemView:enabled` sets the disabled dates.
- */
 QCalendarWidget QAbstractItemView:enabled
 {
     color: #eff0f1;
@@ -985,7 +947,6 @@ QCalendarWidget QAbstractItemView:enabled
     selection-background-color: #3daee9;
 }
 
-/* Won't take hover events. */
 QCalendarWidget QToolButton#qt_calendar_nextmonth
 {
     border-image: url(:/dark/calendar_next.svg);
@@ -1018,7 +979,6 @@ QLabel
     border: 0em solid black;
 }
 
-/* BORDERS */
 QTabWidget::pane
 {
     padding: 0.23em;
@@ -1054,12 +1014,7 @@ QTabBar
     qproperty-drawBase: 0;
     left: 0.23em;
     border-radius: 0.13em;
-    /**
-     *  Note: this is the underline for each tab title. It's not
-     *  documented, and this took forever to track down. At least
-     *  10 hours have been wasted trying to turn off this line,
-     *  do not deleted this comment.
-     */
+
     selection-color: transparent;
 }
 
@@ -1070,7 +1025,7 @@ QTabBar:focus
 
 QTabBar::close-button
 {
-    /* Doesn't seem possible to resize these buttons */
+
     border-image: url(:/dark/transparent.svg);
     image: url(:/dark/close.svg);
     background: transparent;
@@ -1086,7 +1041,6 @@ QTabBar::close-button:pressed
     image: url(:/dark/close_pressed.svg);
 }
 
-/* TOP TABS */
 QTabBar::tab:top,
 QTabBar::tab:top:last,
 QTabBar::tab:top:only-one
@@ -1139,7 +1093,6 @@ QTabBar::tab:top:!selected:first:hover
     border-bottom-right-radius: 0em;
 }
 
-/* BOTTOM TABS */
 QTabBar::tab:bottom,
 QTabBar::tab:bottom:last,
 QTabBar::tab:bottom:only-one
@@ -1192,7 +1145,6 @@ QTabBar::tab:bottom:!selected:first:hover
     border-top-right-radius: 0em;
 }
 
-/* LEFT TABS */
 QTabBar::tab:left,
 QTabBar::tab:left:last,
 QTabBar::tab:left:only-one
@@ -1245,7 +1197,6 @@ QTabBar::tab:left:!selected:first:hover
     border-bottom-right-radius: 0em;
 }
 
-/* RIGHT TABS */
 QTabBar::tab:right,
 QTabBar::tab:right:last,
 QTabBar::tab:right:only-one
@@ -1329,35 +1280,18 @@ QTabBar QToolButton::left-arrow:disabled
 QDockWidget
 {
     background: #31363b;
-    /**
-     *  It doesn't seem possible to change the border of the
-     *  QDockWidget without changing the content margins.
-     */
-    /**
-     *  This is a bug fix so we can handle hover, pressed, and other events.
-     *  Reference: https://stackoverflow.com/questions/32145080/qdockwidget-float-close-button-hover-images
-     */
+
     titlebar-close-icon: url(:/dark/transparent.svg);
     titlebar-normal-icon: url(:/dark/transparent.svg);
 }
 
-/**
- *  Don't style the title, since it gives a weird, missing border
- *  around the rest of the dock widget, which the remaining border
- *  cannot be removed.
- *
- *  There is a bug in Qt6, where the icons are small. It doesn't
- *  change if we use `image` instead of `border-image`, nor if we
- *  use `qproperty-icon`, etc. The icon seem to be half the size
- *  of our desired values.
- */
 QDockWidget::close-button,
 QDockWidget::float-button
 {
     border: 0.04em solid transparent;
     border-radius: 0.09em;
     background: transparent;
-    /* Maximum icon size for buttons */
+
     icon-size: 14px;
 }
 
@@ -1372,7 +1306,6 @@ QDockWidget::float-button:hover
     image: url(:/dark/undock_hover.svg);
 }
 
-/* The :pressed events don't register, seems to be a Qt bug. */
 QDockWidget::float-button:pressed
 {
     image: url(:/dark/undock_hover.svg);
@@ -1389,7 +1322,6 @@ QDockWidget::close-button:hover
     image: url(:/dark/close_hover.svg);
 }
 
-/* The :pressed events don't register, seems to be a Qt bug. */
 QDockWidget::close-button:pressed
 {
     image: url(:/dark/close_pressed.svg);
@@ -1416,7 +1348,6 @@ QTreeView::branch:has-siblings
     image: none;
 }
 
-/* These branch indicators don't scale */
 TreeView::branch:!has-siblings
 {
     border-image: none;
@@ -1471,7 +1402,7 @@ QTreeView::branch:open:has-children:has-siblings:hover
 
 QListView
 {
-    /* Give space for elements aligned left or right. */
+
     padding: 0.2em;
 }
 
@@ -1586,7 +1517,7 @@ QToolButton::left-arrow,
 QToolButton::up-arrow,
 QToolButton::down-arrow
 {
-    /* Undo the padding when we have an arrow */
+
     padding-right: -1.2em;
 }
 
@@ -1639,7 +1570,7 @@ QToolButton::menu-button
 {
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-    /* 1ex width + 0.4ex for border + no text = 2ex allocated above */
+
     width: 1.3em;
     padding: 0.23em;
     outline: none;
@@ -1707,7 +1638,6 @@ QAbstractItemView::item:selected:!active
     background: rgba(61, 173, 232, 0.1);
 }
 
-/* Use background with qlineargradient to avoid ugly border on widget. */
 QAbstractItemView::item:selected:active
 {
     background: qlineargradient(
@@ -1778,7 +1708,6 @@ QHeaderView::section:checked
     background-color: #334e5e;
 }
 
-/* Note that this doesn't work for QTreeView unless the header is clickable */
 QHeaderView::section:hover,
 QHeaderView::section::horizontal::first:hover,
 QHeaderView::section::horizontal::only-one:hover,
@@ -1817,7 +1746,6 @@ QTableView QTableCornerButton::section
     border-radius: 0em;
 }
 
-/* No hover event */
 QTableView QTableCornerButton:hover
 {
     border: 0.04em transparent #76797c;
@@ -1855,12 +1783,6 @@ QSplitter::handle
     max-height: 0em;
 }
 
-/**
- *  It's not possible to get satisfactory rounded borders here.
- *  If you set the border to be negative, while adjusting the
- *  widths, you get an asymmetrical curve which produces an
- *  unappealing border.
- */
 QProgressBar:horizontal,
 QProgressBar:vertical
 {
@@ -1909,22 +1831,6 @@ QScrollArea:hover
     border: 0em solid black;
 }
 
-/* ICONS */
-/**
- *  Qt's built-in icons can look pretty bad if the system theme
- *  is a different color than the current one. For example, when
- *  using a dark theme, with a light UI, the `Ok` button is greyed
- *  out for an about dialog.
- *
- *  QDialogButtonBox will apply for all standard buttons in all standard
- *  widgets, such as QMessageBox, etc. However, we do need to override
- *  standard icons elsewhere.
- *
- *  The rest of the icons make little sense to implement:
- *      Qt uses native window decorations.
- *      Qt normally uses native file dialogs, which look nicer.
- *      Media controls are used in custom widgets, which aren't standard.
- */
 QDialogButtonBox
 {
     dialogbuttonbox-buttons-have-icons: true;
@@ -1935,10 +1841,7 @@ QDialogButtonBox
     dialog-open-icon: url(:/dark/dialog_open.svg);
     dialog-reset-icon: url(:/dark/dialog_reset.svg);
     dialog-save-icon: url(:/dark/dialog_save.svg);
-    /**
-     *  No support yet for overriding saveall.
-     *  dialog-saveall-icon: url(:/dark/dialog_saveall.svg);
-     */
+
     dialog-yes-icon: url(:/dark/dialog_ok.svg);
     dialog-help-icon: url(:/dark/dialog_help.svg);
     dialog-no-icon: url(:/dark/dialog_no.svg);
@@ -1954,7 +1857,6 @@ QMessageBox
     messagebox-warning-icon: url(:/dark/message_warning.svg);
 }
 
-/* Set some styles for these custom dialog buttons */
 QDialogButtonBox QPushButton,
 QMessageBox QPushButton
 {

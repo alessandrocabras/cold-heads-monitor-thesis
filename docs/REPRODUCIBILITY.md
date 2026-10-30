@@ -88,7 +88,7 @@ extrema whose origin is unverified. Figure code retains the generic ADC-value ax
 because a current calibration is not established.
 
 The notebook's `05_random_forest_confusion_matrix.png` uses all sampled observations,
-including training rows, despite an older inline comment mentioning holdout.
+including training rows.
 It must be captioned as a sampled-data diagnostic. Holdout accuracy comes from
 the RF evaluation cell. Do not present that figure as independent test evidence.
 

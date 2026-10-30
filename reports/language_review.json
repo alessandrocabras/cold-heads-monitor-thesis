@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-30",
+  "baseline_commit": "42bed7162b66f6490e9d29586f6e0940987e20f5",
+  "scope": "English comments, notebook prose and output messages; inactive code, repetitive comments, decorative console separators and 15 archived array/debug prints removed.",
+  "checks": {
+    "python_executable_structure_equivalent_files": 7,
+    "notebook_executable_structure_equivalent_cells": 132,
+    "firmware_non_comment_tokens_equivalent_files": 6,
+    "notebook_comments_before": 249,
+    "notebook_comments_after": 18,
+    "theme_license_preserved": true,
+    "model_bytes_unchanged": true,
+    "gui_offscreen_render": true,
+    "repository_integrity_and_model_interface": true
+  },
+  "method": "Compared Python ASTs excluding output-only print calls, after normalizing approved message translations and removing inactive string expressions/docstrings. Compared firmware tokens excluding comments. Manually reviewed remaining comments and archived notebook output strings.",
+  "not_performed": [
+    "Full training on external datasets",
+    "Firmware compilation",
+    "Live hardware acquisition"
+  ]
+}

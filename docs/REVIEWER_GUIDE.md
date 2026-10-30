@@ -27,8 +27,9 @@ The offline verifier establishes integrity and software loading, not scientific
 accuracy or instrument calibration.
 
 Notebook outputs were removed from public copies to omit large embedded images,
-machine-specific logs and stale execution results. Cell source is retained.
-The preparation manifest records the source and exported hashes.
+machine-specific logs and stale execution results. Comments are kept concise,
+and notebook prose and output messages are in English. The preparation manifest
+records original source hashes, current exported hashes and curation updates.
 
 See `REPRODUCIBILITY.md` before executing the analysis, and `RESULTS.md` before
 comparing metrics from the published and later experiments.
